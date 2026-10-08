@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Contact</title>
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="icon" type="image/x-icon" href="assets/favicon.png">
+		<link href="https://fonts.cdnfonts.com/css/mangabey" rel="stylesheet">
+        <script src="scripts/script.js"></script>
+   </head>
+   <body>
+		<header>
+			<div class="nav-container">
+				<div class="top-bar-left">
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="about.html">About</a></li>
+						<li><a href="activities.html">Activities</a></li>
+					</ul>
+				</div>
+				<div class="top-bar-center">
+					<a href="index.html">
+						<img src="./assets/logo.png" alt="Camp Connor Logo" class="logo">
+					</a>
+				</div>
+				<div class="top-bar-right">
+					<ul>
+						<li><a href="registration.html">Registration</a></li>
+						<li><a href="staff.html">Staff</a></li>
+						<li><a href="contact.html">Contact</a></li>
+					</ul>
+				</div>
+			</div>
+		</header>
+		<section class="banner">
+			<article>
+				<h1>Contact</h1>
+			</article>
+		</section>
+		<section class="gallery-container">
+			<article class="registration-boxes">
+				<!--<a href="https://www.flaticon.com/free-icons/email" title="email icons">Email icons created by Freepik - Flaticon</a>-->
+				<img src="assets/email-icon.png" alt="Email Icon" class="activities-icons">
+				<h2>Email Addresses:</h2>
+				<p>Camp Connor: <a href="mailto:campconnorpolandrec@gmail.com" class="contact-link">campconnorpolandrec@gmail.com</a></p>
+				<p>Amanda Olmstead - Director: <a href="mailto:rugernriver@gmail.com" class="contact-link">rugernriver@gmail.com</a></p>
+				<p>Scott Segal - Poland Parks & Rec. Director: <a href="mailto:ssegal@polandtownoffice.org" class="contact-link">ssegal@polandtownoffice.org</a></p>
+			</article>
+			<article class="registration-boxes">
+				<!--<a href="https://www.flaticon.com/free-icons/phone" title="phone icons">Phone icons created by Freepik - Flaticon</a>-->
+				<img src="assets/phone-icon.png" alt="Phone Icon" class="activities-icons">
+				<h2>Phone Numbers:</h2>
+				<p>Call our Camp Phone: <a href="tel:+12079982024" class="contact-link">(207)998-2024</a></p>
+				<p>For registration or general inquiries, call the Poland Recreation Department: <a href="tel:+12079984650" class="contact-link">(207)998-4650</a></p>
+
+			</article>
+		</section>
+		<main class="form">
+			<form id="adoption-form" action="/submit" method="POST" novalidate>
+            <section>
+               <h2>Contact Us</h2>
+               <p>Get in touch with us, we will get back to you shortly.</p>
+            </section>
+			<section>
+				<div class="contact-fields">
+					<p>
+						<label for="firstName">First Name</label>
+						<input type="text" id="firstName" name="firstName" placeholder="Enter your first name" required>
+					</p>
+					<p>
+						<label for="lastName">Last Name</label>
+						<input type="text" id="lastName" name="lastName" placeholder="Enter your last name" required>
+					</p>
+					<p>
+						<label for="email">Email Address</label>
+						<input type="email" id="email" name="email" placeholder="Enter your email address" required>
+						<span class="error-message" id="email-error" aria-live="polite"></span>
+					</p>
+					<p>
+						<label for="phone">Phone Number</label>
+						<!--USA Regex code for phone number <a href="https://gist.github.com/jengle-dev/a327f2b58e08f384ec41dbb5e5454c28#patterns"-->
+						<!--Used this website to create tests to work for multiple formats <a href="https://regexr.com/"-->
+						<input type="tel" id="phone" name="phone" pattern="^(\+?1[\s-.]?)?\(?([0-9]{3})\)?[\s-.]?([0-9]{3})[\s-.]?([0-9]{4})$" placeholder="123-456-7890" aria-describedby="phone-error" required>
+						<span class="error-message" id="phone-error" aria-live="polite"></span> 
+					</p>
+				   </div>
+				<div class="message-box">
+					<label for="message" class="message-box">Message</label>
+					<textarea id="message" name="message" placeholder="Enter your message" required></textarea>
+				</div>
+				<div class="button-group">
+				   <button  type="reset" id="resetBtn"> Clear Form</button>
+				   <button type="submit" value="submit">Submit</button>
+				</div>
+			 </form>
+			</section>
+		</main>
+
+		<footer>
+			<section class="footer-content">
+				<div class="content">
+					<article>
+						<a href="https://maps.app.goo.gl/Y8GtMHuEEjBRrmxN9" class="address">
+							<h3>Address</h3>
+							<address>
+							70 Connor Lane, <br>
+							Poland, ME <br>
+							04274
+							</address>
+						</a>
+					</article>
+					<article>
+						<h3>Hours of Operation</h3>
+						<p>June 22, 2026 - August 21, 2026</p>
+						<p>Monday - Friday</p>
+						<p>7:00 am - 5:30 pm</p>
+					</article>
+					<article class="socials"> 
+						<h3>Social Links</h3>
+						<!--<a href="https://www.flaticon.com/free-icons/facebook" title="facebook icons">Facebook icons created by IconsBox - Flaticon</a>-->
+						<p>Follow us on:</p>
+						<a href="https://www.facebook.com/CampConnorMaine">
+							<img src="assets/facebook-icon.png" alt="Facebook Logo" class="facebook-icon">
+						</a>
+					</article>
+				</div>
+			</section>
+		</footer>
+   </body>
+</html>
